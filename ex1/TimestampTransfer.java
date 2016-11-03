@@ -24,9 +24,9 @@ import java.util.Scanner;  //导入java.util.Scanner包
 				Date lineDate = null;    //定义一个Date类型的变量lineDate，值为空
 				long lineTimestamp;     //定义一个long类型的变量lineTimestamp
 				try {                //捕获异常
-					lineDate = inputFormat.parse(line);   //
-					lineTimestamp = lineDate.getTime();
-					System.out.println(outputFormat.format(lineDate) + " to " + lineTimestamp);
+					lineDate = inputFormat.parse(line);   //将line中的数据更改为inputFormat的格式并输出给lineDate
+					lineTimestamp = lineDate.getTime();   //根据lineDate的数据获得时间戳并且输入给lineTimestamp
+					System.out.println(outputFormat.format(lineDate) + " to " + lineTimestamp);  //输出“lineDate的值” to “lineTimestamp的值”
 				} catch (ParseException e) {     //抛出异常
 					// TODO Auto-generated catch block
 					e.printStackTrace();
